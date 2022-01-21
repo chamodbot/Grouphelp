@@ -255,14 +255,9 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name},
-@The_Group_help_bot යනු ඔබගේ සමූහය පහසුවෙන් සහ ආරක්ෂිතව කළමනාකරණය කිරීම සදහා සහය දෙන වඩාත් අංග සම්පූර්ණ බොට්වරයෙකි.
- 
-⭕️ මට වඩාත් හොදින් ක්‍රියා කිරීම සදහා මාව සුපිරි සමූහයකට එකතු කර ඇඩ්මින්වරයෙකු ලෙස උසස් කරන්න!
- 
-❓ විධාන මොනවාද? ❓
-/help යන්න මත ක්ලික් කර සියලුම විධාන සහ ඒවා ක්‍රියා කරන ආකාරය දැනගන්න!
-""".format(
+        """Hello There {first_name}, I'm {BOT_NAME} 
+An  advanced telegram Group management Bot For help 
+You Protect Your Groups & Suit For All Your Needs.
             first_name=name,
             bot_name=BOT_NAME,
         ),
@@ -296,14 +291,12 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = f"""
-Hello {query.from_user.first_name},
-@The_Group_help_bot යනු ඔබගේ සමූහය පහසුවෙන් සහ ආරක්ෂිතව කළමනාකරණය කිරීම සදහා සහය දෙන වඩාත් අංග සම්පූර්ණ බොට්වරයෙකි.
- 
-⭕️ මට වඩාත් හොදින් ක්‍රියා කිරීම සදහා මාව සුපිරි සමූහයකට එකතු කර ඇඩ්මින්වරයෙකු ලෙස උසස් කරන්න!
- 
-❓ විධාන මොනවාද? ❓
-/help යන්න මත ක්ලික් කර සියලුම විධාන සහ ඒවා ක්‍රියා කරන ආකාරය දැනගන්න!
+    top_text = f"""Hey there {query.from_user.first_name} My name is Rose bot ⚡️ 
+I am a group management bot, here to help you get around and keep the order in your groups. 
+If you have any bugs or questions on how to use me, head to support group.
+General commands:
+ - /start: Starts me! You've probably already used this.
+ - /help: Sends this message; I'll tell you more about myself!
  """
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
