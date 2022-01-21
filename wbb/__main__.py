@@ -291,13 +291,12 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = f"""Hey there {query.from_user.first_name} My name is Rose bot ⚡️ 
+    top_text = f"""Hey there,
 I am a group management bot, here to help you get around and keep the order in your groups. 
 If you have any bugs or questions on how to use me, head to support group.
 General commands:
  - /start: Starts me! You've probably already used this.
- - /help: Sends this message; I'll tell you more about myself!
- """
+ - /help: Sends this message; I'll tell you more about myself!"""
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
         text = (
