@@ -292,11 +292,17 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-I am a group management bot, here to help you get around and keep the order in your groups. 
-If you have any bugs or questions on how to use me, head to support group.
-General commands:
- - /start: Starts me! You've probably already used this.
- - /help: Sends this message; I'll tell you more about myself!"""
+Hello {query.from_user.first_name}, My name is {BOT_NAME}.
+I'm a group management bot with some usefule features.
+You can choose an option below, by clicking a button.
+Also you can ask anything in Support Group.
+    
+General command are:
+ - /start: Start the bot
+ - /help: Give this message
+"""
+
+
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
         text = (
