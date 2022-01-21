@@ -39,9 +39,8 @@ from wbb.utils.pastebin import paste
 
 __MODULE__ = "Music"
 __HELP__ = """
-/ytmusic [link] To Download Music From Various Websites Including Youtube. [SUDOERS]
-/saavn [query] To Download Music From Saavn.
-/lyrics [query] To Get Lyrics Of A Song.
+/music [link] To Download Music From Various Websites Including Youtube. [SUDOERS]
+/song [query] To Download Music From Saavn.
 """
 
 is_downloading = False
@@ -78,12 +77,12 @@ def download_youtube_audio(arq_resp):
     return [title, performer, duration, audio_file, thumbnail_file]
 
 
-@app.on_message(filters.command("ytmusic"))
+@app.on_message(filters.command("music"))
 @capture_err
 async def music(_, message):
     global is_downloading
     if len(message.command) < 2:
-        return await message.reply_text("/ytmusic needs a query as argument")
+        return await message.reply_text("/music needs a query as argument")
 
     url = message.text.split(None, 1)[1]
     if is_downloading:
@@ -181,7 +180,7 @@ async def jssong(_, message):
 # Lyrics
 
 
-@app.on_message(filters.command("lyrics"))
+@app.on_message(filters.command("Ditels"))
 async def lyrics_func(_, message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage:**\n/lyrics [QUERY]")
