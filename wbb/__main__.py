@@ -110,22 +110,22 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="⭕️  Update  ⭕️",
+                url="https://t.me/zoneunlimited",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 🖥",
+                text="✴️ System Stats ✴️",
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="http://t.me/WBBSupport"
+                text="🔅 Support 🔅", url="http://t.me/zoneunlimitedchat"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Add Me To Your Group 🎉",
+                text="➕  Add   To  Group  ➕",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -147,16 +147,16 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="⭕️  Update  ⭕️",
+                url="https://t.me/zoneunlimited",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
+                text="✴️ System Stats ✴️",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 👨", url="t.me/WBBSupport"),
+            InlineKeyboardButton(text="🔅 Support 🔅", url="t.me/zoneunlimitedchat"),
         ],
     ]
 )
@@ -294,14 +294,13 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
-
-General command are:
- - /start: Start the bot
- - /help: Give this message
+Hello {query.from_user.first_name},
+@The_Group_help_bot යනු ඔබගේ සමූහය පහසුවෙන් සහ ආරක්ෂිතව කළමනාකරණය කිරීම සදහා සහය දෙන වඩාත් අංග සම්පූර්ණ බොට්වරයෙකි.
+ 
+⭕️ මට වඩාත් හොදින් ක්‍රියා කිරීම සදහා මාව සුපිරි සමූහයකට එකතු කර ඇඩ්මින්වරයෙකු ලෙස උසස් කරන්න!
+ 
+❓ විධාන මොනවාද? ❓
+/help යන්න මත ක්ලික් කර සියලුම විධාන සහ ඒවා ක්‍රියා කරන ආකාරය දැනගන්න!
  """
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
