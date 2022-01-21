@@ -291,7 +291,7 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = f"""Hey there,
+    top_text = f"""
 I am a group management bot, here to help you get around and keep the order in your groups. 
 If you have any bugs or questions on how to use me, head to support group.
 General commands:
