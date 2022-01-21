@@ -106,7 +106,7 @@ async def flood_control_func(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🚨   Unmute   🚨",
+                        text="🚫   Unmute   🚫",
                         callback_data=f"unmute_{user_id}",
                     )
                 ]
