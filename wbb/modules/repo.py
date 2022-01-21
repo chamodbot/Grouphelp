@@ -28,10 +28,10 @@ from wbb.core.decorators.errors import capture_err
 from wbb.utils.http import get
 
 __MODULE__ = "Repo"
-__HELP__ = "/repo - To Get My Github Repository Link " "And Support Group Link"
+__HELP__ = "/help - To Get My settings  " "And Support Group Link"
 
 
-@app.on_message(filters.command("repo") & ~filters.edited)
+@app.on_message(filters.command("jsjssksks") & ~filters.edited)
 @capture_err
 async def repo(_, message):
     users = await get(
