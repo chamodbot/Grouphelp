@@ -110,7 +110,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="⭕️  Update  ⭕️",
+                text="⭕️ update ⭕️",
                 url="https://t.me/zoneunlimited",
             ),
         ],
@@ -125,7 +125,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="➕  Add   To  Group  ➕",
+                text="➕ Add Me To Your Group ➕",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -147,7 +147,7 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="⭕️  Update  ⭕️",
+                text="⭕️ update ⭕️",
                 url="https://t.me/zoneunlimited",
             ),
         ],
@@ -255,9 +255,11 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello There {first_name}, I'm {BOT_NAME} 
-An  advanced telegram Group management Bot For help 
-You Protect Your Groups & Suit For All Your Needs.
+        """Hello {first_name}, My name is {bot_name}.
+I'm a group management bot with some useful features.
+You can choose an option below, by clicking a button.
+Also you can ask anything in Support Group.
+""".format(
             first_name=name,
             bot_name=BOT_NAME,
         ),
@@ -296,13 +298,11 @@ Hello {query.from_user.first_name}, My name is {BOT_NAME}.
 I'm a group management bot with some usefule features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
-    
+
 General command are:
  - /start: Start the bot
  - /help: Give this message
-"""
-
-
+ """
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
         text = (
