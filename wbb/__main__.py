@@ -255,10 +255,13 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+        """Hello {first_name},
+@The_Group_help_bot යනු ඔබගේ සමූහය පහසුවෙන් සහ ආරක්ෂිතව කළමනාකරණය කිරීම සදහා සහය දෙන වඩාත් අංග සම්පූර්ණ බොට්වරයෙකි.
+ 
+⭕️ මට වඩාත් හොදින් ක්‍රියා කිරීම සදහා මාව සුපිරි සමූහයකට එකතු කර ඇඩ්මින්වරයෙකු ලෙස උසස් කරන්න!
+ 
+❓ විධාන මොනවාද? ❓
+/help යන්න මත ක්ලික් කර සියලුම විධාන සහ ඒවා ක්‍රියා කරන ආකාරය දැනගන්න!
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
