@@ -149,7 +149,7 @@ async def jssong(_, message):
         )
     is_downloading = True
     text = message.text.split(None, 1)[1]
-    m = await message.reply_text("🌺 Searching music ....")
+    m = await message.reply_text("🌺 Searching music .....")
     try:
         songs = await arq.saavn(text)
         if not songs.ok:
@@ -160,9 +160,9 @@ async def jssong(_, message):
         slink = songs.result[0].media_url
         ssingers = songs.result[0].singers
         sduration = songs.result[0].duration
-        await m.edit("🚀 Downloading Savers....")
+        await m.edit("🚀 Downloading Savers.....")
         song = await download_song(slink)
-        await m.edit("🍀 Uploading ....")
+        await m.edit("🍀 Uploading .....")
         await message.reply_audio(
             audio=song,
             title=sname,
